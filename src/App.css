@@ -1,38 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 .App {
-  text-align: center;
+  background-color: #383e56;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+.title {
+  font-family: Righteous;
+  color: aliceblue;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+.movie {
+  width: 300px;
+  height: 450px;
+  background-color: #fb743e;
+  border-radius: 4px;
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.movie:hover {
+  transform: scale(1.1);
+}
+.movie:hover .movie-pic {
+  transform: scale(1.1);
+}
+.movie-pic {
+  width: 100%;
+  height: 400px;
+}
+.movie-name {
+  font-size: 0.9rem;
   color: white;
+  background-color: #fb743e;
+  width: 208px;
+  height: 100%;
+}
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+}
+.movie-overview {
+  background-color: aliceblue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #383e56;
+  padding: 1rem;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.movie:hover .movie-overview {
+  transform: translateY(0%);
+}
+.rate {
+  background-color: #2e3246;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.rate.gold {
+  color: gold;
+}
+.rate.green {
+  color: green;
+}
+.rate.orange {
+  color: orange;
+}
+.rate.red {
+  color: red;
+}
+.search-box {
+  background-color: #e4f9f5;
+  padding: 3px;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  height: 3rem;
+  width: 40rem;
+  align-self: center;
+}
+.search-box:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+.custom-select {
+  background-color: #e4f9f5;
+  padding: 3px;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+  height: 2rem;
+  width: 9rem;
+  align-self: center;
+  font-family: Arial;
+  color: #757575;
+}
+h6 {
+  color: aliceblue;
+  font-size: 13px;
+  margin-bottom: 0.4rem;
+}
+.custom-select:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.rate-box {
+  padding-right: 3rem;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.plus {
+  width: 10rem;
+  padding-top: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plus-container {
+  height: 450px;
+  width: 300px;
+  text-align: center;
+  border: #ff7139;
+  border-style: solid;
+  border-radius: 4px;
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.plus-container:hover {
+  transform: scale(1.1);
+}
+.plus-container:hover .plus {
+  transform: scale(1.1);
 }
